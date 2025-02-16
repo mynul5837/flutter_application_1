@@ -24,8 +24,8 @@ class MyLAB01 extends StatelessWidget {
               style: TextStyle(color: Colors.black, fontSize: 30),
             ), // Gap between text and stars
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              // crossAxisAlignment: CrossAxisAlignment.center,
               children: const [
                 Icon(
                   Icons.star,
