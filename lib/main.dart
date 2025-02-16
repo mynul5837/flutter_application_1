@@ -28,37 +28,99 @@ class MyLAB01 extends StatelessWidget {
                 fontSize: 30,
               ),
             ), // Gap between text and stars
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: const [
-                Icon(
-                  Icons.star,
-                  size: 50,
-                  color: Colors.black,
-                ),
-                Icon(
-                  Icons.star,
-                  size: 50,
-                  color: Colors.black,
-                ),
-                Icon(
-                  Icons.star,
-                  size: 50,
-                  color: Colors.black,
-                ),
-                Icon(
-                  Icons.star,
-                  size: 50,
-                  color: Colors.black,
-                ),
-                Icon(
-                  Icons.star_border,
-                  size: 50,
-                  color: Colors.black,
-                ),
-              ],
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: const [
+                  Icon(
+                    Icons.star,
+                    size: 50,
+                    color: Colors.black,
+                  ),
+                  Icon(
+                    Icons.star,
+                    size: 50,
+                    color: Colors.black,
+                  ),
+                  Icon(
+                    Icons.star,
+                    size: 50,
+                    color: Colors.black,
+                  ),
+                  Icon(
+                    Icons.star,
+                    size: 50,
+                    color: Colors.black,
+                  ),
+                  Icon(
+                    Icons.star,
+                    size: 50,
+                    color: Colors.black,
+                  ),
+                  Icon(
+                    Icons.star,
+                    size: 50,
+                    color: Colors.black,
+                  ),
+                  Icon(
+                    Icons.star,
+                    size: 50,
+                    color: Colors.black,
+                  ),
+                  Icon(
+                    Icons.star,
+                    size: 50,
+                    color: Colors.black,
+                  ),
+                  Icon(
+                    Icons.star,
+                    size: 50,
+                    color: Colors.black,
+                  ),
+                  Icon(
+                    Icons.star,
+                    size: 50,
+                    color: Colors.black,
+                  ),
+                  Icon(
+                    Icons.star,
+                    size: 50,
+                    color: Colors.black,
+                  ),
+                  Icon(
+                    Icons.star,
+                    size: 50,
+                    color: Colors.black,
+                  ),
+                  Icon(
+                    Icons.star,
+                    size: 50,
+                    color: Colors.black,
+                  ),
+                  Icon(
+                    Icons.star,
+                    size: 50,
+                    color: Colors.black,
+                  ),
+                  Icon(
+                    Icons.star,
+                    size: 50,
+                    color: Colors.black,
+                  ),
+                  Icon(
+                    Icons.star,
+                    size: 50,
+                    color: Colors.black,
+                  ),
+                  Icon(
+                    Icons.star_border,
+                    size: 50,
+                    color: Colors.black,
+                  ),
+                ],
+              ),
             ),
+            const Text("Submit"),
           ],
         ),
       ),
