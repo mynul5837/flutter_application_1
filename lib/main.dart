@@ -18,14 +18,16 @@ class MyLAB01 extends StatelessWidget {
               const Color.fromARGB(255, 137, 59, 232), // Dark navigation bar
         ),
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
               "4.0",
               style: TextStyle(color: Colors.black, fontSize: 30),
             ), // Gap between text and stars
             Row(
-              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              // crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: const [
                 Icon(
                   Icons.star,
