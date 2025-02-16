@@ -1,126 +1,141 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
+// import 'package:iconsax/iconsax.dart';
 
 void main() {
-  runApp(const MyLAB01());
+  runApp(const MyApp());
 }
 
-class MyLAB01 extends StatelessWidget {
-  const MyLAB01({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text("TheFirstApp"),
-          backgroundColor:
-              const Color.fromARGB(255, 137, 59, 232), // Dark navigation bar
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  bool _isHovering = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        centerTitle: true,
+        title: const Text('Welcome to NIKE'),
+        titleTextStyle: const TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Color.fromARGB(255, 255, 255, 255),
+            fontSize: 30),
+      ),
+      body: Container(
+        padding: const EdgeInsets.all(30),
+        margin:
+            const EdgeInsets.only(left: 50, right: 50, top: 100, bottom: 100),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(50),
+          color: const Color.fromARGB(255, 234, 228, 245),
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            const Text(
-              "4.0",
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 30,
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                MouseRegion(
+                  onEnter: (_) {
+                    setState(() {
+                      _isHovering = true;
+                    });
+                  },
+                  onExit: (_) {
+                    setState(() {
+                      _isHovering = false;
+                    });
+                  },
+                  child: Text(
+                    "50% OFF",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: _isHovering ? Colors.red : Colors.black,
+                      fontWeight: FontWeight.bold,
+                      decoration: _isHovering
+                          ? TextDecoration.underline
+                          : TextDecoration.none,
+                    ),
+                  ),
+                ),
+                const Icon(Icons.home)
+              ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: const [
-                Expanded(
-                  child: Icon(
-                    Icons.star,
-                    size: 50,
-                    color: Colors.black,
+              children: [
+                Container(
+                  width: 200,
+                  height: 200,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    image: const DecorationImage(
+                      image: AssetImage('assets/image/shoe.png'),
+                      fit: BoxFit.fill,
+                    ),
                   ),
-                ),
-                Flexible(
-                  fit: FlexFit.loose,
-                  flex: 3,
-                  child: Icon(
-                    Icons.star,
-                    size: 50,
-                    color: Colors.black,
-                  ),
-                ),
-                Icon(
-                  Icons.star,
-                  size: 50,
-                  color: Colors.black,
-                ),
-                Icon(
-                  Icons.star,
-                  size: 50,
-                  color: Colors.black,
-                ),
-                Icon(
-                  Icons.star,
-                  size: 50,
-                  color: Colors.black,
-                ),
-                Icon(
-                  Icons.star,
-                  size: 50,
-                  color: Colors.black,
-                ),
-                Icon(
-                  Icons.star,
-                  size: 50,
-                  color: Colors.black,
-                ),
-                Icon(
-                  Icons.star,
-                  size: 50,
-                  color: Colors.black,
-                ),
-                Icon(
-                  Icons.star,
-                  size: 50,
-                  color: Colors.black,
-                ),
-                Icon(
-                  Icons.star,
-                  size: 50,
-                  color: Colors.black,
-                ),
-                Icon(
-                  Icons.star,
-                  size: 50,
-                  color: Colors.black,
-                ),
-                Icon(
-                  Icons.star,
-                  size: 50,
-                  color: Colors.black,
-                ),
-                Icon(
-                  Icons.star,
-                  size: 50,
-                  color: Colors.black,
-                ),
-                Icon(
-                  Icons.star,
-                  size: 50,
-                  color: Colors.black,
-                ),
-                Icon(
-                  Icons.star,
-                  size: 50,
-                  color: Colors.black,
-                ),
-                Icon(
-                  Icons.star_border,
-                  size: 50,
-                  color: Colors.black,
                 ),
               ],
             ),
-            const Text("Submit"),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: const [
+                Text(
+                  "ADIDAS VERSION 4",
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const [
+                Text(
+                  "\$ 45,000",
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text(
+                  "\$ 55,000",
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.grey,
+                    fontWeight: FontWeight.bold,
+                    decoration: TextDecoration.lineThrough,
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
