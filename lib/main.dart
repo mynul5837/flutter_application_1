@@ -15,7 +15,7 @@ class MyLAB01 extends StatelessWidget {
         appBar: AppBar(
           title: const Text("TheFirstApp"),
           backgroundColor:
-              const Color.fromARGB(255, 133, 106, 106), // Dark navigation bar
+              const Color.fromARGB(255, 137, 59, 232), // Dark navigation bar
         ),
         body: Column(
           children: [
@@ -24,6 +24,8 @@ class MyLAB01 extends StatelessWidget {
               style: TextStyle(color: Colors.black, fontSize: 30),
             ), // Gap between text and stars
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: const [
                 Icon(
                   Icons.star,
